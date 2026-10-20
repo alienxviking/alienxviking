@@ -21,7 +21,7 @@ A quantitative trading platform in Rust. One strategy binary runs **backtest, pa
 
 <p align="center">
   <a href="https://github.com/alienxviking/redpen"><img src="./assets/redpen.svg" width="49%" alt="RedPen: AI marking that ties every mark to a verbatim quote and boxes the mistake on the page"/></a>
-  <a href="https://github.com/alienxviking/scaler-HFT-C--2028/tree/capstone-order-book-10155/Capstone/24bcs10155-Snehangshu-Roy_24bcs10246-Saniya-Patil"><img src="./assets/orderbook.svg" width="49%" alt="Limit order book in C++: 56.7 ns add and 38.3 ns cancel, 3.8x faster than std::map overall"/></a>
+  <a href="https://github.com/alienxviking/limit-order-book"><img src="./assets/orderbook.svg" width="49%" alt="Limit order book in C++: 56.7 ns add and 38.3 ns cancel, 3.8x faster than std::map overall"/></a>
 </p>
 <p align="center">
   <a href="https://github.com/alienxviking/sift"><img src="./assets/sift.svg" width="49%" alt="sift: hybrid keyword + semantic document search fused with Reciprocal Rank Fusion"/></a>
