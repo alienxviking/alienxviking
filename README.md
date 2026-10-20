@@ -46,7 +46,7 @@ flowchart LR
 | Paper | Live | Simulated |
 | Live | Live | Live |
 
-- 🧱 **12 crates, 30K lines, 416 tests:** recorder, order-book reconstruction, Parquet normalization, engine, simulated venue and an offline verifier
+- 🧱 **12 crates, ~65K lines, 797 tests:** recorder, order-book reconstruction, Parquet normalization, engine, simulated venue and an offline verifier
 - 🎯 **A 14-day live paper run reproduced its backtest exactly**: same fills, cash and realized P&L to the satoshi, across 97.9M recorded frames with zero missing
 - 💰 **Money is fixed-point `i64`**; float arithmetic is denied by clippy across the whole workspace
 - 🛡️ **Risk is a mandatory chokepoint**, not a library the strategy chooses to call: an oversized order never reaches the venue
