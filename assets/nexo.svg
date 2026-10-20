@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340" role="img" aria-label="nexo: real-time 1:1 chat with typing indicators, presence and sent, delivered and seen receipts. Messages fan out through Redis pub/sub so several socket servers can run side by side.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0b0f19"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="0.9">
+      <stop offset="0" stop-color="#39c5cf" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#39c5cf" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+    .hand{font-family:'Segoe Print','Bradley Hand','Comic Sans MS','Chalkboard SE',cursive}
+
+    .msg,.typing,.tk{opacity:0}
+    .m1{animation:m1 8s infinite}.m2{animation:m2 8s infinite}.m3{animation:m3 8s infinite}
+    .typing{animation:ty 8s infinite}
+    .t1{animation:t1 8s steps(1) infinite}.t2{animation:t2 8s steps(1) infinite}.t3{animation:t3 8s steps(1) infinite}
+    @keyframes m1{0%,3%{opacity:0;transform:translateY(6px)}7%,92%{opacity:1;transform:none}98%,100%{opacity:0}}
+    @keyframes m2{0%,16%{opacity:0;transform:translateY(6px)}20%,92%{opacity:1;transform:none}98%,100%{opacity:0}}
+    @keyframes t1{0%{opacity:0}19%{opacity:1}28%{opacity:0}}
+    @keyframes t2{0%{opacity:0}28%{opacity:1}38%{opacity:0}}
+    @keyframes t3{0%{opacity:0}38%{opacity:1}96%{opacity:0}}
+    @keyframes ty{0%,42%{opacity:0}45%,62%{opacity:1}64%,100%{opacity:0}}
+    @keyframes m3{0%,63%{opacity:0;transform:translateY(6px)}67%,92%{opacity:1;transform:none}98%,100%{opacity:0}}
+    .bob{animation:bob 1s ease-in-out infinite}.b2{animation-delay:.15s}.b3{animation-delay:.3s}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+  </style>
+  <rect x="0.5" y="0.5" width="599" height="339" rx="18" fill="url(#bg)" stroke="#30363d"/>
+  <rect x="0.5" y="0.5" width="599" height="339" rx="18" fill="url(#glow)"/>
+  <rect x="28" y="0.5" width="64" height="3" rx="1.5" fill="#39c5cf"/>
+  <text x="28" y="50" class="sans" font-size="24" font-weight="800" fill="#e6edf3">nexo</text>
+  <rect x="386" y="30" width="186" height="26" rx="13" fill="#39c5cf" fill-opacity="0.12" stroke="#39c5cf" stroke-opacity="0.5"/>
+  <text x="479.0" y="47.5" class="mono" font-size="12" font-weight="600" fill="#39c5cf" text-anchor="middle">TypeScript · Socket.io</text>
+  <text x="28" y="77" class="sans" font-size="14.5" fill="#8b949e">Real-time chat that keeps working when you add servers.</text>
+
+  <rect x="28" y="96" width="300" height="184" rx="12" fill="#161b22" stroke="#30363d"/>
+  <circle cx="48" cy="117" r="10" fill="#39c5cf" fill-opacity="0.25"/>
+  <text x="48" y="121.5" class="sans" font-size="11" font-weight="700" fill="#56d4dd" text-anchor="middle">A</text>
+  <text x="66" y="116" class="sans" font-size="13" font-weight="700" fill="#e6edf3">alex</text>
+  <text x="66" y="130" class="sans" font-size="11" fill="#3fb950">online</text>
+  <line x1="28" y1="138" x2="328" y2="138" stroke="#21262d"/>
+  <g class="msg m1">
+    <rect x="40" y="148" width="168" height="28" rx="14" fill="#30363d"/>
+    <text x="54" y="166.5" class="sans" font-size="13" fill="#e6edf3">did the deploy go out?</text>
+  </g>
+  <g class="msg m2">
+    <rect x="178" y="184" width="138" height="28" rx="14" fill="#1f6feb"/>
+    <text x="192" y="202.5" class="sans" font-size="13" fill="#ffffff">yep, all green</text>
+  </g>
+  <text x="304" y="202.5" class="sans tk t1" font-size="11" fill="#c9d1d9" text-anchor="end">✓</text>
+  <text x="304" y="202.5" class="sans tk t2" font-size="11" fill="#c9d1d9" text-anchor="end">✓✓</text>
+  <text x="304" y="202.5" class="sans tk t3" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">✓✓</text>
+  <g class="typing">
+    <rect x="40" y="220" width="54" height="26" rx="13" fill="#30363d"/>
+    <circle cx="56" cy="233" r="3" fill="#8b949e" class="bob"/><circle cx="67" cy="233" r="3" fill="#8b949e" class="bob b2"/><circle cx="78" cy="233" r="3" fill="#8b949e" class="bob b3"/>
+  </g>
+  <g class="msg m3">
+    <rect x="40" y="220" width="112" height="28" rx="14" fill="#30363d"/>
+    <text x="54" y="238.5" class="sans" font-size="13" fill="#e6edf3">nice, ship it</text>
+  </g>
+  <text x="40" y="268" class="mono" font-size="10.5" fill="#6e7681">typing · presence · receipts</text>
+
+  <text x="348" y="112" class="mono" font-size="11" letter-spacing="1.2" fill="#6e7681">SCALE OUT</text>
+  <g fill="none" stroke="#30363d" stroke-width="2">
+    <path d="M440 139 C462 139 462 196 484 196"/><path d="M440 196 L484 196"/><path d="M440 253 C462 253 462 196 484 196"/>
+  </g>
+  <g class="sans">
+    <rect x="348" y="124" width="92" height="30" rx="8" fill="#161b22" stroke="#30363d"/><text x="394" y="143.5" class="mono" font-size="12" fill="#c9d1d9" text-anchor="middle">ws-1</text>
+    <rect x="348" y="181" width="92" height="30" rx="8" fill="#161b22" stroke="#30363d"/><text x="394" y="200.5" class="mono" font-size="12" fill="#c9d1d9" text-anchor="middle">ws-2</text>
+    <rect x="348" y="238" width="92" height="30" rx="8" fill="#161b22" stroke="#30363d"/><text x="394" y="257.5" class="mono" font-size="12" fill="#c9d1d9" text-anchor="middle">ws-3</text>
+    <rect x="484" y="172" width="88" height="48" rx="10" fill="#f85149" fill-opacity="0.12" stroke="#f85149" stroke-opacity="0.7"/>
+    <text x="528" y="193" font-size="14" font-weight="800" fill="#ffa198" text-anchor="middle">Redis</text>
+    <text x="528" y="210" class="mono" font-size="10.5" fill="#ff7b72" text-anchor="middle">pub/sub</text>
+  </g>
+  <g fill="#56d4dd">
+    <circle r="4"><animateMotion dur="2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.45;1" calcMode="linear" path="M440 139 C462 139 462 196 484 196"/></circle>
+    <circle r="4"><animateMotion dur="2s" repeatCount="indefinite" keyPoints="0;0;1" keyTimes="0;0.5;1" calcMode="linear" path="M484 196 L440 196"/></circle>
+    <circle r="4"><animateMotion dur="2s" repeatCount="indefinite" keyPoints="0;0;1" keyTimes="0;0.5;1" calcMode="linear" path="M484 196 C462 196 462 253 440 253"/></circle>
+  </g>
+  <line x1="28" y1="294" x2="572" y2="294" stroke="#21262d"/>
+  <text x="28" y="320" class="mono" font-size="12" fill="#8b949e">sent / delivered / <tspan fill="#56d4dd">seen</tspan> · voice notes · scheduled + self-destructing</text>
+</svg>

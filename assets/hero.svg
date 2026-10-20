@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-label="Snehangshu Roy, systems and AI engineer. Rust and C++ trading infrastructure, AI agents, cloud infrastructure. Open to contract work.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f1e"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.12" cy="0.05" r="0.65">
+      <stop offset="0" stop-color="#1f6feb" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#1f6feb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.92" cy="1" r="0.6">
+      <stop offset="0" stop-color="#8957e5" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#8957e5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nameFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#c7d2fe"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1200" height="460" rx="22"/></clipPath>
+    <clipPath id="type1"><rect x="96" y="336" height="26" width="0">
+      <animate attributeName="width" values="0;0;250;250;250" keyTimes="0;0.06;0.3;0.92;1" dur="9s" repeatCount="indefinite"/>
+    </rect></clipPath>
+  </defs>
+  <style>
+    .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+    .pulse{animation:pulse 1.8s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+    .blink{animation:blink 1.05s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .out{opacity:0;animation:out 9s infinite}
+    @keyframes out{0%,34%{opacity:0}38%,92%{opacity:1}97%,100%{opacity:0}}
+    .bar{transform-box:fill-box;transform-origin:100% 50%;animation:depth 3.2s ease-in-out infinite alternate}
+    .bid{transform-origin:0% 50%}
+    @keyframes depth{0%{transform:scaleX(.55)}45%{transform:scaleX(1)}100%{transform:scaleX(.72)}}
+    .d1{animation-duration:2.6s}.d2{animation-duration:3.7s;animation-delay:-1s}.d3{animation-duration:2.9s;animation-delay:-2s}
+    .d4{animation-duration:4.1s;animation-delay:-.5s}.d5{animation-duration:3.3s;animation-delay:-1.6s}
+    .tickA{animation:tickA 4s steps(1) infinite}.tickB{animation:tickB 4s steps(1) infinite}
+    @keyframes tickA{0%{opacity:1}50%{opacity:0}}
+    @keyframes tickB{0%{opacity:0}50%{opacity:1}}
+    .flash{animation:flash 4s ease-out infinite}
+    @keyframes flash{0%{fill-opacity:.22}20%,100%{fill-opacity:0}}
+    .rise{opacity:0;animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .r2{animation-delay:.15s}.r3{animation-delay:.3s}.r4{animation-delay:.45s}.r5{animation-delay:.6s}
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="460" fill="url(#bg)"/>
+    <rect width="1200" height="460" fill="url(#grid)"/>
+    <rect width="1200" height="460" fill="url(#glowA)"/>
+    <rect width="1200" height="460" fill="url(#glowB)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="459" rx="22" fill="none" stroke="#30363d"/>
+
+  <!-- left: identity -->
+  <g class="rise">
+    <rect x="60" y="48" width="226" height="30" rx="15" fill="#3fb950" fill-opacity="0.1" stroke="#3fb950" stroke-opacity="0.45"/>
+    <circle cx="80" cy="63" r="5" fill="#3fb950" class="pulse"/>
+    <text x="94" y="68" class="sans" font-size="14" font-weight="600" fill="#56d364">open to contract work</text>
+  </g>
+
+  <text x="58" y="150" class="sans rise r2" font-size="66" font-weight="800" letter-spacing="-1.5" fill="url(#nameFill)">Snehangshu Roy</text>
+  <text x="60" y="194" class="sans rise r3" font-size="26" font-weight="600" fill="#e6edf3">Systems <tspan fill="#58a6ff">+</tspan> AI engineer</text>
+  <text x="60" y="230" class="sans rise r3" font-size="17" fill="#8b949e">I build software where correctness is checked, not assumed.</text>
+
+  <g class="sans rise r4" font-size="13.5" font-weight="600" text-anchor="middle">
+    <rect x="60" y="254" width="196" height="30" rx="8" fill="#1f6feb" fill-opacity="0.14" stroke="#388bfd" stroke-opacity="0.5"/>
+    <text x="158" y="274" fill="#79c0ff">Rust / C++ trading infra</text>
+    <rect x="266" y="254" width="218" height="30" rx="8" fill="#8957e5" fill-opacity="0.14" stroke="#a371f7" stroke-opacity="0.5"/>
+    <text x="375" y="274" fill="#d2a8ff">AI agents · RAG · LLM evals</text>
+    <rect x="494" y="254" width="180" height="30" rx="8" fill="#d29922" fill-opacity="0.12" stroke="#d29922" stroke-opacity="0.5"/>
+    <text x="584" y="274" fill="#e3b341">AWS · K8s · Terraform</text>
+  </g>
+
+  <!-- terminal -->
+  <g class="rise r5">
+    <rect x="60" y="314" width="614" height="96" rx="12" fill="#010409" fill-opacity="0.85" stroke="#30363d"/>
+    <circle cx="80" cy="330" r="4.5" fill="#f85149" fill-opacity="0.85"/>
+    <circle cx="95" cy="330" r="4.5" fill="#d29922" fill-opacity="0.85"/>
+    <circle cx="110" cy="330" r="4.5" fill="#3fb950" fill-opacity="0.85"/>
+    <text x="634" y="334" class="mono" font-size="11.5" fill="#6e7681" text-anchor="end">~/quant</text>
+    <text x="78" y="356" class="mono" font-size="15" fill="#3fb950">$</text>
+    <text x="96" y="356" class="mono" font-size="15" fill="#e6edf3" clip-path="url(#type1)">cargo test --workspace</text>
+    <g class="out">
+      <text x="78" y="388" class="mono" font-size="15" fill="#8b949e">test result: <tspan fill="#3fb950" font-weight="700">ok</tspan>. <tspan fill="#e6edf3">797 passed</tspan>; 0 failed · 12 crates</text>
+    </g>
+  </g>
+
+  <!-- right: live order book -->
+  <g class="rise r3">
+    <rect x="730" y="44" width="410" height="372" rx="16" fill="#0d1117" fill-opacity="0.82" stroke="#30363d"/>
+    <text x="752" y="80" class="mono" font-size="15" font-weight="700" fill="#e6edf3">BTCUSDT</text>
+    <text x="836" y="80" class="mono" font-size="12" fill="#6e7681">L2 book · replay</text>
+    <circle cx="1026" cy="75" r="4.5" fill="#f85149" class="pulse"/>
+    <text x="1118" y="80" class="mono" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">STREAMING</text>
+    <g class="mono" font-size="10.5" fill="#6e7681" letter-spacing="1">
+      <text x="752" y="106">PRICE</text>
+      <text x="960" y="106" text-anchor="end">SIZE</text>
+      <text x="1118" y="106" text-anchor="end">DEPTH</text>
+    </g>
+    <line x1="752" y1="114" x2="1118" y2="114" stroke="#21262d"/>
+
+    <!-- asks -->
+    <g class="mono" font-size="14">
+      <rect x="980" y="121" width="138" height="18" rx="3" fill="#f85149" fill-opacity="0.16" class="bar d1"/>
+      <rect x="1000" y="145" width="118" height="18" rx="3" fill="#f85149" fill-opacity="0.16" class="bar d2"/>
+      <rect x="1050" y="169" width="68" height="18" rx="3" fill="#f85149" fill-opacity="0.16" class="bar d3"/>
+      <rect x="1012" y="193" width="106" height="18" rx="3" fill="#f85149" fill-opacity="0.16" class="bar d4"/>
+      <rect x="1064" y="217" width="54" height="18" rx="3" fill="#f85149" fill-opacity="0.16" class="bar d5"/>
+      <g fill="#ff7b72">
+        <text x="752" y="135">77,636.24</text><text x="752" y="159">77,636.21</text><text x="752" y="183">77,636.19</text>
+        <text x="752" y="207">77,636.17</text><text x="752" y="231">77,636.16</text>
+      </g>
+      <g fill="#c9d1d9" text-anchor="end">
+        <text x="960" y="135">2.930</text><text x="960" y="159">1.208</text><text x="960" y="183">0.075</text>
+        <text x="960" y="207">0.412</text><text x="960" y="231">0.640</text>
+      </g>
+    </g>
+
+    <!-- mid -->
+    <rect x="740" y="243" width="390" height="40" fill="#3fb950" fill-opacity="0" class="flash"/>
+    <g class="tickA">
+      <text x="752" y="271" class="mono" font-size="21" font-weight="700" fill="#3fb950">77,636.16 ▲</text>
+    </g>
+    <g class="tickB">
+      <text x="752" y="271" class="mono" font-size="21" font-weight="700" fill="#f85149">77,636.15 ▼</text>
+    </g>
+    <text x="1118" y="270" class="mono" font-size="12" fill="#6e7681" text-anchor="end">last trade · spread 0.01</text>
+
+    <!-- bids -->
+    <g class="mono" font-size="14">
+      <rect x="998" y="291" width="120" height="18" rx="3" fill="#3fb950" fill-opacity="0.16" class="bar d3"/>
+      <rect x="1054" y="315" width="64" height="18" rx="3" fill="#3fb950" fill-opacity="0.16" class="bar d5"/>
+      <rect x="980" y="339" width="138" height="18" rx="3" fill="#3fb950" fill-opacity="0.16" class="bar d1"/>
+      <rect x="1026" y="363" width="92" height="18" rx="3" fill="#3fb950" fill-opacity="0.16" class="bar d4"/>
+      <rect x="1078" y="387" width="40" height="18" rx="3" fill="#3fb950" fill-opacity="0.16" class="bar d2"/>
+      <g fill="#56d364">
+        <text x="752" y="305">77,636.15</text><text x="752" y="329">77,636.12</text><text x="752" y="353">77,636.10</text>
+        <text x="752" y="377">77,636.07</text><text x="752" y="401">77,636.03</text>
+      </g>
+      <g fill="#c9d1d9" text-anchor="end">
+        <text x="960" y="305">1.775</text><text x="960" y="329">0.330</text><text x="960" y="353">3.104</text>
+        <text x="960" y="377">0.918</text><text x="960" y="401">0.052</text>
+      </g>
+    </g>
+  </g>
+  <text x="935" y="440" class="mono" font-size="11.5" fill="#6e7681" text-anchor="middle">rebuilt from 97.9M recorded frames · 0 missing</text>
+</svg>

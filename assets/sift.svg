@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340" role="img" aria-label="sift: hybrid document search. A query is ranked by Postgres full-text search and by pgvector semantic search, and the two lists are fused with Reciprocal Rank Fusion. Celery OCR and embedding pipeline, local ONNX embeddings, multi-tenant.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0b0f19"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="0.9">
+      <stop offset="0" stop-color="#a371f7" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#a371f7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+    .hand{font-family:'Segoe Print','Bradley Hand','Comic Sans MS','Chalkboard SE',cursive}
+
+    .res{opacity:0;animation:res 8s ease-out infinite}
+    @keyframes res{0%{opacity:0;transform:translateY(5px)}6%,90%{opacity:1;transform:none}97%,100%{opacity:0}}
+    .c1.k0{animation-delay:1.7s}.c1.k1{animation-delay:1.85s}.c1.k2{animation-delay:2s}
+    .c2.k0{animation-delay:2.2s}.c2.k1{animation-delay:2.35s}.c2.k2{animation-delay:2.5s}
+    .c3.k0{animation-delay:3.1s}.c3.k1{animation-delay:3.3s}.c3.k2{animation-delay:3.5s}
+  </style>
+  <rect x="0.5" y="0.5" width="599" height="339" rx="18" fill="url(#bg)" stroke="#30363d"/>
+  <rect x="0.5" y="0.5" width="599" height="339" rx="18" fill="url(#glow)"/>
+  <rect x="28" y="0.5" width="64" height="3" rx="1.5" fill="#a371f7"/>
+  <text x="28" y="50" class="sans" font-size="24" font-weight="800" fill="#e6edf3">sift</text>
+  <rect x="430" y="30" width="142" height="26" rx="13" fill="#a371f7" fill-opacity="0.12" stroke="#a371f7" stroke-opacity="0.5"/>
+  <text x="501.0" y="47.5" class="mono" font-size="12" font-weight="600" fill="#a371f7" text-anchor="middle">Python · FastAPI</text>
+  <text x="28" y="77" class="sans" font-size="14.5" fill="#8b949e">Document search that fuses keyword and semantic ranking.</text>
+
+  <defs><clipPath id="q"><rect x="64" y="100" height="30" width="0">
+    <animate attributeName="width" values="0;0;220;220;0" keyTimes="0;0.04;0.2;0.94;1" dur="8s" repeatCount="indefinite"/>
+  </rect></clipPath></defs>
+  <rect x="28" y="96" width="544" height="38" rx="10" fill="#161b22" stroke="#30363d"/>
+  <circle cx="46" cy="114" r="6.5" fill="none" stroke="#8b949e" stroke-width="2"/>
+  <line x1="51" y1="119" x2="56" y2="124" stroke="#8b949e" stroke-width="2" stroke-linecap="round"/>
+  <text x="66" y="120" class="mono" font-size="14" fill="#e6edf3" clip-path="url(#q)">termination notice period</text>
+  <text x="560" y="120" class="mono" font-size="11" fill="#6e7681" text-anchor="end">hybrid</text>
+  <g class="mono" font-size="10.5" letter-spacing="1" fill="#6e7681">
+    <text x="28" y="156">KEYWORD · POSTGRES FTS</text>
+    <text x="214" y="156">SEMANTIC · PGVECTOR</text>
+    <text x="414" y="156" fill="#d2a8ff">FUSED · RRF</text>
+  </g>
+  <g class="res c1 k0">
+    <rect x="28" y="166" width="172" height="26" rx="7" fill="#161b22" stroke="#30363d"/>
+    <text x="40" y="183.5" class="mono" font-size="11.5" fill="#6e7681">1</text>
+    <circle cx="58" cy="179" r="4" fill="#58a6ff"/>
+    <text x="70" y="183.5" class="mono" font-size="12" fill="#e6edf3">msa_2024.pdf</text>
+  </g>
+  <g class="res c1 k1">
+    <rect x="28" y="198" width="172" height="26" rx="7" fill="#161b22" stroke="#30363d"/>
+    <text x="40" y="215.5" class="mono" font-size="11.5" fill="#6e7681">2</text>
+    <circle cx="58" cy="211" r="4" fill="#a371f7"/>
+    <text x="70" y="215.5" class="mono" font-size="12" fill="#e6edf3">terms.docx</text>
+  </g>
+  <g class="res c1 k2">
+    <rect x="28" y="230" width="172" height="26" rx="7" fill="#161b22" stroke="#30363d"/>
+    <text x="40" y="247.5" class="mono" font-size="11.5" fill="#6e7681">3</text>
+    <circle cx="58" cy="243" r="4" fill="#6e7681"/>
+    <text x="70" y="247.5" class="mono" font-size="12" fill="#e6edf3">notes.txt</text>
+  </g>
+  <g class="res c2 k0">
+    <rect x="214" y="166" width="172" height="26" rx="7" fill="#161b22" stroke="#30363d"/>
+    <text x="226" y="183.5" class="mono" font-size="11.5" fill="#6e7681">1</text>
+    <circle cx="244" cy="179" r="4" fill="#a371f7"/>
+    <text x="256" y="183.5" class="mono" font-size="12" fill="#e6edf3">terms.docx</text>
+  </g>
+  <g class="res c2 k1">
+    <rect x="214" y="198" width="172" height="26" rx="7" fill="#161b22" stroke="#30363d"/>
+    <text x="226" y="215.5" class="mono" font-size="11.5" fill="#6e7681">2</text>
+    <circle cx="244" cy="211" r="4" fill="#e3b341"/>
+    <text x="256" y="215.5" class="mono" font-size="12" fill="#e6edf3">scan_0412.png</text>
+  </g>
+  <g class="res c2 k2">
+    <rect x="214" y="230" width="172" height="26" rx="7" fill="#161b22" stroke="#30363d"/>
+    <text x="226" y="247.5" class="mono" font-size="11.5" fill="#6e7681">3</text>
+    <circle cx="244" cy="243" r="4" fill="#58a6ff"/>
+    <text x="256" y="247.5" class="mono" font-size="12" fill="#e6edf3">msa_2024.pdf</text>
+  </g>
+  <path d="M392 211 l10 0 m-4 -5 l5 5 l-5 5" fill="none" stroke="#a371f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="res c2 k2"/>
+  <g class="res c3 k0">
+    <rect x="414" y="166" width="158" height="26" rx="7" fill="#161b22" stroke="#a371f7" stroke-opacity="0.8"/>
+    <text x="426" y="183.5" class="mono" font-size="11.5" fill="#6e7681">1</text>
+    <circle cx="444" cy="179" r="4" fill="#a371f7"/>
+    <text x="456" y="183.5" class="mono" font-size="12" fill="#e6edf3">terms.docx</text>
+  </g>
+  <g class="res c3 k1">
+    <rect x="414" y="198" width="158" height="26" rx="7" fill="#161b22" stroke="#58a6ff" stroke-opacity="0.8"/>
+    <text x="426" y="215.5" class="mono" font-size="11.5" fill="#6e7681">2</text>
+    <circle cx="444" cy="211" r="4" fill="#58a6ff"/>
+    <text x="456" y="215.5" class="mono" font-size="12" fill="#e6edf3">msa_2024.pdf</text>
+  </g>
+  <g class="res c3 k2">
+    <rect x="414" y="230" width="158" height="26" rx="7" fill="#161b22" stroke="#e3b341" stroke-opacity="0.8"/>
+    <text x="426" y="247.5" class="mono" font-size="11.5" fill="#6e7681">3</text>
+    <circle cx="444" cy="243" r="4" fill="#e3b341"/>
+    <text x="456" y="247.5" class="mono" font-size="12" fill="#e6edf3">scan_0412.png</text>
+  </g>
+  <line x1="28" y1="294" x2="572" y2="294" stroke="#21262d"/>
+  <text x="28" y="320" class="mono" font-size="12" fill="#8b949e">Celery <tspan fill="#d2a8ff">OCR + embeddings</tspan> pipeline · local ONNX · multi-tenant</text>
+</svg>

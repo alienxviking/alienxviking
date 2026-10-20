@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340" role="img" aria-label="RedPen: AI marking that ties every mark to a verbatim quote from the student's answer and boxes the mistake on the page. Rubric rows are clamped and the total equals their sum. 102 offline tests, 4 LLM backends.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0b0f19"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="0.9">
+      <stop offset="0" stop-color="#f85149" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#f85149" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+    .hand{font-family:'Segoe Print','Bradley Hand','Comic Sans MS','Chalkboard SE',cursive}
+
+    .draw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 7s ease-in-out infinite}
+    .d2{animation-delay:.9s}
+    @keyframes draw{0%,8%{stroke-dashoffset:100}22%,88%{stroke-dashoffset:0}96%,100%{stroke-dashoffset:100}}
+    .note{opacity:0;animation:note 7s ease-in-out infinite}
+    .n2{animation-delay:.9s}
+    @keyframes note{0%,20%{opacity:0}27%,88%{opacity:1}96%,100%{opacity:0}}
+    .row{opacity:0;animation:row 7s ease-out infinite}
+    .r2{animation-delay:.25s}.r3{animation-delay:.5s}.r4{animation-delay:.9s}
+    @keyframes row{0%,26%{opacity:0;transform:translateX(6px)}32%,90%{opacity:1;transform:none}97%,100%{opacity:0}}
+  </style>
+  <rect x="0.5" y="0.5" width="599" height="339" rx="18" fill="url(#bg)" stroke="#30363d"/>
+  <rect x="0.5" y="0.5" width="599" height="339" rx="18" fill="url(#glow)"/>
+  <rect x="28" y="0.5" width="64" height="3" rx="1.5" fill="#f85149"/>
+  <text x="28" y="50" class="sans" font-size="24" font-weight="800" fill="#e6edf3">RedPen</text>
+  <rect x="430" y="30" width="142" height="26" rx="13" fill="#f85149" fill-opacity="0.12" stroke="#f85149" stroke-opacity="0.5"/>
+  <text x="501.0" y="47.5" class="mono" font-size="12" font-weight="600" fill="#f85149" text-anchor="middle">TypeScript · LLM</text>
+  <text x="28" y="77" class="sans" font-size="14.5" fill="#8b949e">AI marking that shows its work: every mark tied to the student's words.</text>
+
+  <g>
+    <rect x="30" y="100" width="318" height="178" rx="8" fill="#000" fill-opacity="0.35"/>
+    <rect x="28" y="96" width="318" height="178" rx="8" fill="#f6f1e4"/>
+    <g stroke="#9ec5fe" stroke-opacity="0.55">
+      <line x1="40" y1="128" x2="334" y2="128"/><line x1="40" y1="156" x2="334" y2="156"/>
+      <line x1="40" y1="184" x2="334" y2="184"/><line x1="40" y1="212" x2="334" y2="212"/>
+      <line x1="40" y1="240" x2="334" y2="240"/>
+    </g>
+    <line x1="62" y1="100" x2="62" y2="270" stroke="#f85149" stroke-opacity="0.35"/>
+    <g class="hand" font-size="15" fill="#1e3a8a">
+      <text x="44" y="124">Q3</text>
+      <text x="70" y="124">By Ohm's law V = IR,</text>
+      <text x="70" y="152">so I = V / R = 12 / 3</text>
+      <text x="70" y="180">I =</text><text x="104" y="180">4 V</text>
+      <text x="70" y="208">the current is high, so the</text>
+      <text x="70" y="236">resister</text><text x="146" y="236">heats up.</text>
+    </g>
+    <rect x="98" y="164" width="44" height="24" rx="3" fill="none" stroke="#e5383b" stroke-width="2.2" class="draw" pathLength="100"/>
+    <path d="M70 242 q4 4 8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0" fill="none" stroke="#e5383b" stroke-width="1.8" class="draw d2" pathLength="100"/>
+    <g class="hand note" font-size="13.5" fill="#e5383b">
+      <text x="152" y="181">unit: amperes  −1</text>
+    </g>
+    <g class="hand note n2" font-size="13.5" fill="#e5383b">
+      <text x="226" y="236">sp. resistor</text>
+    </g>
+  </g>
+  <g class="sans">
+    <text x="366" y="112" class="mono" font-size="11" letter-spacing="1.2" fill="#6e7681">RUBRIC · Q3</text>
+    <g class="row r1"><text x="366" y="140" font-size="13.5" fill="#c9d1d9">relation V = IR</text><text x="572" y="140" class="mono" font-size="13.5" fill="#56d364" text-anchor="end">2 / 2</text></g>
+    <g class="row r2"><text x="366" y="166" font-size="13.5" fill="#c9d1d9">substitution</text><text x="572" y="166" class="mono" font-size="13.5" fill="#56d364" text-anchor="end">2 / 2</text></g>
+    <g class="row r3"><text x="366" y="192" font-size="13.5" fill="#c9d1d9">answer + unit</text><text x="572" y="192" class="mono" font-size="13.5" fill="#ff7b72" text-anchor="end">1 / 2</text></g>
+    <line x1="366" y1="205" x2="572" y2="205" stroke="#30363d"/>
+    <g class="row r4">
+      <text x="366" y="230" font-size="15" font-weight="800" fill="#e6edf3">total</text>
+      <text x="572" y="231" class="mono" font-size="17" font-weight="800" fill="#e6edf3" text-anchor="end">5 / 6</text>
+      <text x="366" y="250" class="mono" font-size="11" fill="#56d364">✓ = sum of rows, clamped to max</text>
+      <text x="366" y="272" class="mono" font-size="11" fill="#8b949e">confidence</text>
+      <rect x="446" y="263" width="96" height="8" rx="4" fill="#30363d"/>
+      <rect x="446" y="263" width="79" height="8" rx="4" fill="#d29922"/>
+      <text x="572" y="272" class="mono" font-size="11" fill="#e3b341" text-anchor="end">.82</text>
+    </g>
+  </g>
+  <line x1="28" y1="294" x2="572" y2="294" stroke="#21262d"/>
+  <text x="28" y="320" class="mono" font-size="12" fill="#8b949e"><tspan fill="#ffa198">102</tspan> offline tests · <tspan fill="#ffa198">4</tspan> LLM backends · quote → span → page box</text>
+</svg>
