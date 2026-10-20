@@ -1,8 +1,9 @@
-<h1 align="center">Snehangshu Roy</h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,45:1f6feb,100:8957e5&height=210&section=header&text=Snehangshu%20Roy&fontSize=52&fontColor=ffffff&fontAlignY=36&desc=Systems%20%2B%20AI%20engineer&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Snehangshu Roy"/>
 
 <p align="center">
-  Systems + AI engineer &nbsp;·&nbsp; Rust/C++ trading infrastructure &nbsp;·&nbsp; Python AI agents &nbsp;·&nbsp; cloud infra<br/>
-  CS @ Scaler School of Technology ('28) &nbsp;·&nbsp; <b>open to contract and freelance work</b>
+  <a href="https://github.com/alienxviking">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=620&lines=Rust+%2F+C%2B%2B+trading+infrastructure;Python+AI+agents+and+RAG+pipelines;AWS+%C2%B7+Kubernetes+%C2%B7+Terraform;Open+to+contract+and+freelance+work" alt="Rust / C++ trading infrastructure · Python AI agents and RAG pipelines · AWS · Kubernetes · Terraform · Open to contract and freelance work"/>
+  </a>
 </p>
 
 <p align="center">
@@ -12,83 +13,107 @@
   <a href="mailto:snehangshu.roy.mail@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
----
+<p align="center"><sub>CS @ Scaler School of Technology ('28)</sub></p>
 
 I like building systems where correctness is checked, not assumed: a trading engine where backtest, paper and live run the same code path, a document pipeline that survives worker restarts, and infrastructure that can be destroyed and rebuilt from Terraform.
 
-## Flagship: [quant](https://github.com/alienxviking/quant)
+## 📈 Flagship: [quant](https://github.com/alienxviking/quant)
 
 A quantitative trading platform in Rust. It captures market data, replays it deterministically, and runs **one strategy binary across backtest, paper and live trading with no code changes**.
 
-- 12-crate workspace and ~400 commits: recorder, order-book reconstruction, Parquet normalization, engine, simulated venue and an offline verifier
-- Money is fixed-point `i64`; float arithmetic is denied by clippy across the whole workspace
-- Every event carries two timestamps and only receive time is dispatched on, so lookahead bias can't get in
-- Feed gaps are recorded as events, and a mandatory risk layer sits between every strategy and every venue
+```mermaid
+flowchart LR
+    H["HistoricalSource<br/>Parquet replay"] --> E
+    L["LiveSource<br/>exchange WebSocket"] --> E
+    E(("Engine")) <--> S["Strategy"]
+    E --> R["RiskLayer<br/>mandatory chokepoint"]
+    R --> SV["SimulatedVenue<br/>fills · fees · latency"]
+    R -.-> LV["LiveVenue<br/>real orders · in progress"]
 
-## Other work
+    classDef src fill:#0d2a4a,stroke:#1f6feb,color:#e6edf3
+    classDef core fill:#2a1650,stroke:#8957e5,color:#e6edf3
+    classDef venue fill:#0f2e1d,stroke:#2ea043,color:#e6edf3
+    classDef wip fill:#2b2410,stroke:#9e6a03,color:#e6edf3,stroke-dasharray:4 3
+    class H,L src
+    class E,S,R core
+    class SV venue
+    class LV wip
+```
+
+| Mode | Source | Venue |
+|---|---|---|
+| Backtest | Historical | Simulated |
+| Paper | Live | Simulated |
+| Live | Live | Live |
+
+- 🧱 **12 crates, ~400 commits:** recorder, order-book reconstruction, Parquet normalization, engine, simulated venue and an offline verifier
+- 💰 **Money is fixed-point `i64`**; float arithmetic is denied by clippy across the whole workspace
+- ⏱️ **Two timestamps on every event**, and only receive time is dispatched on, so lookahead bias can't get in
+- 🕳️ **Feed gaps are recorded as events**: "we weren't watching" is data, not silence
+
+## 🛠️ Other work
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/alienxviking/sift">sift</a></h3>
-      Document processing and hybrid search. Uploads (PDF, images, DOCX) go to Celery workers for text extraction, OCR, thumbnails and local embeddings, then become searchable through Postgres full-text + pgvector. Multi-tenant, with live status over WebSockets.<br/><br/>
-      <code>FastAPI</code> <code>Next.js</code> <code>Celery</code> <code>pgvector</code> &nbsp;·&nbsp; <a href="https://sift-docprocess.vercel.app/">live</a>
+      <h3>🔎 <a href="https://github.com/alienxviking/sift">sift</a></h3>
+      Document processing and hybrid search. Uploads (PDF, images, DOCX) go to Celery workers for text extraction, OCR, thumbnails and local embeddings, then become searchable through Postgres full-text + pgvector. Multi-tenant, with live status over WebSockets.
+      <br/><br/>
+      <code>FastAPI</code> <code>Next.js</code> <code>Celery</code> <code>pgvector</code>
+      <br/><br/>
+      <a href="https://sift-docprocess.vercel.app/"><img src="https://img.shields.io/badge/live_demo-1f6feb?style=flat-square&logo=vercel&logoColor=white" alt="live demo"/></a>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/alienxviking/web-automation-agent">web-automation-agent</a></h3>
-      A browser agent that works from screenshots instead of CSS selectors. A vision LLM looks at the page, decides where to click and type, and drives Chromium through Playwright. Comes with a web UI to watch it work live, and a CLI.<br/><br/>
+      <h3>🤖 <a href="https://github.com/alienxviking/web-automation-agent">web-automation-agent</a></h3>
+      A browser agent that works from screenshots instead of CSS selectors. A vision LLM looks at the page, decides where to click and type, and drives Chromium through Playwright. Comes with a web UI to watch it work live, and a CLI.
+      <br/><br/>
       <code>Python</code> <code>Playwright</code> <code>Llama 4 vision (Groq)</code>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/alienxviking/devops-homework">DevOps on real AWS</a></h3>
-      21 hands-on labs ending in TripBoard: GitHub Actions with SAST, dependency and secret scanning plus a Trivy gate, images to GHCR, Helm on Kubernetes, Argo CD GitOps, Prometheus + Grafana. Terraform provisions kind locally or EKS on AWS.<br/><br/>
+      <h3>☁️ <a href="https://github.com/alienxviking/devops-homework">DevOps on real AWS</a></h3>
+      21 hands-on labs ending in TripBoard: GitHub Actions with SAST, dependency and secret scanning plus a Trivy gate, images to GHCR, Helm on Kubernetes, Argo CD GitOps, Prometheus + Grafana. Terraform provisions kind locally or EKS on AWS.
+      <br/><br/>
       <code>Terraform</code> <code>EKS</code> <code>Helm</code> <code>Argo CD</code>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/alienxviking/nexo">nexo</a></h3>
-      Real-time 1:1 chat with sent/delivered/seen receipts, typing indicators, voice notes, and scheduled and self-destructing messages. Message delivery goes through Redis pub/sub so the socket servers can scale out.<br/><br/>
-      <code>Socket.io</code> <code>Redis</code> <code>Prisma</code> <code>Postgres</code> &nbsp;·&nbsp; <a href="https://nexo-navy.vercel.app">live</a>
+      <h3>💬 <a href="https://github.com/alienxviking/nexo">nexo</a></h3>
+      Real-time 1:1 chat with sent/delivered/seen receipts, typing indicators, voice notes, and scheduled and self-destructing messages. Message delivery goes through Redis pub/sub so the socket servers can scale out.
+      <br/><br/>
+      <code>Socket.io</code> <code>Redis</code> <code>Prisma</code> <code>Postgres</code>
+      <br/><br/>
+      <a href="https://nexo-navy.vercel.app"><img src="https://img.shields.io/badge/live_demo-1f6feb?style=flat-square&logo=vercel&logoColor=white" alt="live demo"/></a>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/alienxviking/momentum">momentum</a></h3>
-      A social accountability app: habit streaks, group leaderboards driven by a computed 0–100 accountability score, peer reviews, challenges and weekly recaps. Installable PWA with web push.<br/><br/>
-      <code>Next.js</code> <code>Supabase</code> <code>PWA</code> &nbsp;·&nbsp; <a href="https://momentum-seven-flame.vercel.app">live</a>
+      <h3>🔥 <a href="https://github.com/alienxviking/momentum">momentum</a></h3>
+      A social accountability app: habit streaks, group leaderboards driven by a computed 0–100 accountability score, peer reviews, challenges and weekly recaps. Installable PWA with web push.
+      <br/><br/>
+      <code>Next.js</code> <code>Supabase</code> <code>PWA</code>
+      <br/><br/>
+      <a href="https://momentum-seven-flame.vercel.app"><img src="https://img.shields.io/badge/live_demo-1f6feb?style=flat-square&logo=vercel&logoColor=white" alt="live demo"/></a>
     </td>
     <td width="50%" valign="top">
-      <h3>Right now</h3>
+      <h3>⚡ Right now</h3>
       Taking <a href="https://github.com/alienxviking/quant">quant</a> from paper trading toward live order routing, and benchmarking three C++ limit-order-book designs under <code>perf</code> for a high-performance C++ course.
     </td>
   </tr>
 </table>
 
-## Stack
+## 🧰 Stack
 
-<p>
-  <img src="https://img.shields.io/badge/Rust-161b22?style=flat-square&logo=rust&logoColor=white" alt="Rust"/>
-  <img src="https://img.shields.io/badge/C%2B%2B-161b22?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
-  <img src="https://img.shields.io/badge/Python-161b22?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/TypeScript-161b22?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/Java-161b22?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
-  <br/>
-  <img src="https://img.shields.io/badge/FastAPI-161b22?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/Next.js-161b22?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-161b22?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-161b22?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Redis-161b22?style=flat-square&logo=redis&logoColor=white" alt="Redis"/>
-  <br/>
-  <img src="https://img.shields.io/badge/Docker-161b22?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/Kubernetes-161b22?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
-  <img src="https://img.shields.io/badge/Helm-161b22?style=flat-square&logo=helm&logoColor=white" alt="Helm"/>
-  <img src="https://img.shields.io/badge/Terraform-161b22?style=flat-square&logo=terraform&logoColor=white" alt="Terraform"/>
-  <img src="https://img.shields.io/badge/AWS-161b22?style=flat-square" alt="AWS"/>
-  <img src="https://img.shields.io/badge/GitHub_Actions-161b22?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/Argo_CD-161b22?style=flat-square&logo=argo&logoColor=white" alt="Argo CD"/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=rust,cpp,python,ts,java,fastapi,nextjs,spring,postgres,redis,docker,kubernetes,terraform,aws,githubactions,linux&perline=8&theme=dark" alt="Rust, C++, Python, TypeScript, Java, FastAPI, Next.js, Spring, PostgreSQL, Redis, Docker, Kubernetes, Terraform, AWS, GitHub Actions, Linux"/>
 </p>
 
-## Work with me
+## 🤝 Work with me
 
-I take contract work in **backend and systems engineering**, **AI agents and RAG pipelines**, and **cloud infrastructure (AWS, Kubernetes, Terraform)**. Email me at **snehangshu.roy.mail@gmail.com**.
+I take contract work in **backend and systems engineering**, **AI agents and RAG pipelines**, and **cloud infrastructure (AWS, Kubernetes, Terraform)**.
+
+<p align="center">
+  <a href="mailto:snehangshu.roy.mail@gmail.com"><img src="https://img.shields.io/badge/Email_me-snehangshu.roy.mail%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email me"/></a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8957e5,55:1f6feb,100:0d1117&height=110&section=footer" width="100%" alt=""/>
