@@ -33,7 +33,7 @@ A quantitative trading platform in Rust. One strategy binary runs **backtest, pa
 </p>
 
 <p align="center"><sub>
-  Live demos: <a href="https://sift-docprocess.vercel.app/">sift</a> · <a href="https://nexo-navy.vercel.app">nexo</a> · <a href="https://momentum-seven-flame.vercel.app">momentum</a> (habit-accountability PWA) &nbsp;|&nbsp;
+  Live demos: <a href="https://sift-docprocess.vercel.app/">sift</a> · <a href="https://nexo-chatapp.vercel.app">nexo</a> · <a href="https://momentum-seven-flame.vercel.app">momentum</a> (habit-accountability PWA) &nbsp;|&nbsp;
   Low-level design in Java: <a href="https://github.com/alienxviking/rate-limiter">rate-limiter</a> · <a href="https://github.com/alienxviking/distributed-cache">distributed-cache</a> · <a href="https://github.com/alienxviking/parking-lot">parking-lot</a>
 </sub></p>
 
